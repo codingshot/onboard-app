@@ -5,6 +5,7 @@ on: [pull_request]
 
 jobs:
   build:
+    timeout-minutes: 60
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
     runs-on: ubuntu-latest
     strategy:
